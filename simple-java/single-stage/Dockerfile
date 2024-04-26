@@ -6,6 +6,6 @@ COPY . .
 
 RUN apt update && apt install default-jre
 
-RUN javac -d . Multiply.java && jar cvf multiply.jar .
+RUN javac -d . multiply.java && jar cvf multiply.jar .
 
 ENTRYPOINT ["java", "-jar", "multiply.jar"]
